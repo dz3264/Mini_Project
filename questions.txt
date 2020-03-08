@@ -47,7 +47,7 @@ Example:
 How many movies in genre  __Drama__ between___1999___ and ___2010____.
 http://localhost:3300/api/genres/Drama?from=1990&to=2010
 
-Result
+Result:
 {
     "genre": "Drama",
     "movie_count": {
@@ -81,3 +81,6 @@ Result
 --------------------------------------------------------------------------------------------------
 
 [sector plot] rating range __(4-5)__ in all movies ___(2010)____. 
+
+
+
