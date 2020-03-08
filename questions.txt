@@ -1,11 +1,13 @@
-How many movies in genre  ______have rating range _____ in year  ______.
+[histogram] Plot all genres distribution between ___2005___ and ___2010____.
+The distribution of all genres during different time, which can show the trend of movies.
 
-http://localhost:3300/api/genres/(genre)?from=(year)&to=(year+1)
+[line chart] How many movies in genre  ___（choose one）___ in between ___2005___ and ___2010____.
+Show trend of one movie in a time period
+
+http://localhost:3300/api/genres/(genre)?from=(year)&to=(year)
 Example:
 How many movies in genre  __Adventure__ in year  ___1999___
 http://localhost:3300/api/genres/Adventure?from=1999&to=2000
 
-
-[histogram]Plot the rating between _____2005 and 2010.________.
 
 [sector plot] rating range __(4-5)__ in all movies ___(2010)____. 
