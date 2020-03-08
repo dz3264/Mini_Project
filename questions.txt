@@ -80,7 +80,34 @@ Result:
 
 --------------------------------------------------------------------------------------------------
 
-[sector plot] rating range __(4-5)__ in all movies ___(2010)____. 
+[sector diagram] How ’s rating of movies release in genre  ___（choose one）___ in between ___2005___ and ___2010____.
 
+API:
+http://localhost:3300/api/genres/Rating?genre=(genre)&from=(year)&to=(year)
+
+Example:
+How many movies in genre  __Adventure__ between___2000___ and ___2010____.
+http://localhost:3300/api/genres/Rating?genre=Adventure&from=2000&to=2010
+
+Result:
+{
+    "genre": "Rating",
+    "movies": {
+        "0-2": 3,
+        "2-4": 61,
+        "4-6": 319,
+        "6-8": 419,
+        "8-10": 18
+    },
+    "year_range": [
+        2000,
+        2010
+    ]
+}
+
+If didn't provide query grene, you will get ratings of all genre of movies
+
+Example:
+http://localhost:3300/api/genres/Rating?&from=2000&to=2010
 
 
