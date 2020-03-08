@@ -1,8 +1,10 @@
 How many movies in genre  ______have rating range _____ in year  ______.
+
 http://localhost:3300/api/genres/(genre)?from=(year)&to=(year+1)
 Example:
 How many movies in genre  __Adventure__ in year  ___1999___
 http://localhost:3300/api/genres/Adventure?from=1999&to=2000
+
 
 [histogram]Plot the rating between _____2005 and 2010.________.
 
