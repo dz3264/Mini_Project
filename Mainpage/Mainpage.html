@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title> Movie visualization</title>
+    <link rel="stylesheet" href="goodstyles.css"/>
+    <link rel="icon" href="img/crawn.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+</head>
+<body>
+<div>
+    <ul class="menue">
+        <li>Menu
+            <ul class="sub_menue">
+                <li><a href="#div01">Database Introduction</a></li>
+                <li><a href="#div02">Question1</a></li>
+                <li><a href="#div03">Question2</a></li>
+                <li><a href="#div04">Question3</a></li>
+                <li><a href="#div05">Question4</a></li>
+                <li><a href="https://grouplens.org/datasets/movielens/">Database Address</a></li>
+                <li><a href="mailto:jianfei2@ualberta.ca">Email me</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div>
+<h1> <img src="img/crawn.ico" alt="logo" width = 30 height= 30 /> Movie Database Visualization</h1>
+<figure class="mypic">
+    <img src="./img/movie-details-fullpage.png" class="mypic" alt="picture" height= 500 />
+        <figcaption>
+            "Movielens Database"
+        </figcaption>
+</figure>
+</div>
+
+<div class="sidebar">
+        <div class="navbox">
+            <ul class="nav">
+                <li><a href="#div01">Question1</a></li>
+                <li><a href="#div02">Question2</a></li>
+                <li><a href="#div03">Question3</a></li>
+                <li><a href="#div04">Question4</a></li>
+                <li><a href="#div05">Question5</a></li>
+            </ul>
+        </div>
+</div>
+
+<div id="div01">
+    <h2 class="subtitle" > <span class= "ini">D</span>atabase Introduction</h2>
+</div>
+    
+<div id="div02">
+<h3 class="subtitle"> <span class= "ini">Q</span>uestion1?</h3>
+    <ol class="profhis">
+    <li> 1.</li>
+    <li> 2.</li>
+    <li> 3.</li>
+    <li> 4.</li>
+    <li> 5.</li>
+    </ol>
+</div>
+<div id="div03">
+    <h4 class="subtitle"> <span class= "ini">Q</span>uestion2?</h4>
+</div>
+
+<div id="div04">
+    <h5 class="subtitle"> <span class= "ini">Q</span>uestion3?</h5>
+</div>
+
+<div id="div05">
+    <h6 class="subtitle"> <span class= "ini">Q</span>uestion4?</h6>
+</div>
+
+
+  <div class="container">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+    //---reference https://www.youtube.com/watch?v=sE08f4iuOhA
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'pixel';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart = new Chart(myChart, {
+      type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:['Genre1', 'Genre2', 'Genre3', 'Genre4', 'Genre5', 'Genre6'],
+        datasets:[{
+          label:'Quantity',
+          data:[
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          //backgroundColor:'green',
+          backgroundColor:[
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)'
+          ],
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'Number of movies in genres',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
+
+<div>
+    <p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+    </p>
+    <footer> Copyright &copy; 2020 Jianfei Ma, Huaxin Zhang</footer>
+</div>
+</body>
+</html>

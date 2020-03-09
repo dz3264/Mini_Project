@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@font-face{
+    font-family: pixel;
+    src: url(./fonts/pixelfont/pixel_font-7.ttf);
+}
+body{
+    margin-left: 150px;
+    font-family: pixel;
+    background-image: url(./img/Blue-background/ODRAYS0.jpg);
+    background-size: 100%;
+    background-attachment:fixed;
+}
+.sub_menue
+{
+    display:none;              /*先将子菜单设置为隐藏*/
+}
+ul.menue{
+    font-size: 150%;
+    color: darkblue;
+}
+li:hover .sub_menue
+{
+    display:block;             /*设置鼠标滑过动作，以块级元素的形式显示出子菜单*/
+}
+h1{
+    font-size: 250%;
+    text-align:center;
+}
+h2,h3{
+
+}
+figure.mypic{
+    float: right;
+    padding: 50px 0 0 50px;
+}
+img.mypic{
+    border-radius: 16px;
+}
+figcaption{
+    text-align:center;
+}
+footer{
+    font-size: 50%;
+}
+.rotated{
+    display: inline-block;
+    transform: rotate(-12deg);
+}
+.ini{
+    font-size: 250%;
+}
+.subtitle{
+    font-size: 120%;
+}
+
+
+div.container {
+    text-align: center;
+    width: 500px;
+    padding: 10px 20px;
+}
+
+div.exlink{
+    padding-top: 100px;
+    text-align: center;
+    color: blueviolet;
+}
+.sidebar{
+    position: fixed;
+    margin-left:-150px;
+    margin-right: -20px;
+    
+}
+.navbox{
+    float:left;
+    
+}
+ul.nav{
+    width:100px;
+    padding:50px 0 60px 0;
+    background:url() no-repeat;
+    
+}
+ul.nav li{
+    margin:5px 0 0 0;
+    
+}
+ul.nav li a{
+    background:#cbcbcb url() no-repeat;
+    color:#174867;padding:7px 15px 7px 15px;
+    width:90px;
+    display:block;
+    text-decoration:none;
+    background-image: url(img/Blue-background/ODRAYS0.jpg);
+    
+}
+ul.nav li a:hover{
+    background:#ebebeb url() no-repeat;
+    color:#67a5cd;
+    padding:7px 15px 7px 30px;
+    
+}
+
