@@ -1,0 +1,113 @@
+[histogram] Plot all genres distribution between ___2005___ and ___2010____.
+The distribution of all genres during different time, which can show the trend of movies.
+
+API:
+http://localhost:3300/api/genres/All?from=(year)&to=(year)
+
+Result:
+{
+    "genre": "All",
+    "movie_count": {
+        "Adventure": 1272,
+        "Animation": 872,
+        "Children": 1095,
+        "Comedy": 5581,
+        "Fantasy": 928,
+        "Romance": 2685,
+        "Drama": 8560,
+        "Action": 2606,
+        "Crime": 1713,
+        "Thriller": 3148,
+        "Horror": 1751,
+        "Mystery": 864,
+        "Sci-Fi": 1154,
+        "IMAX": 73,
+        "Documentary": 1803,
+        "War": 454,
+        "Musical": 285,
+        "Western": 139,
+        "Film-Noir": 33
+    },
+    "year_range": [
+        1990,
+        2010
+    ]
+}
+
+
+--------------------------------------------------------------------------------------------------
+
+[line chart] How many movies in genre  ___（choose one）___ between ___2005___ and ___2010____.
+Show trend of one movie in a time period
+
+API:
+http://localhost:3300/api/genres/(genre)?from=(year)&to=(year)
+
+Example:
+How many movies in genre  __Drama__ between___1999___ and ___2010____.
+http://localhost:3300/api/genres/Drama?from=1990&to=2010
+
+Result:
+{
+    "genre": "Drama",
+    "movie_count": {
+        "1990": 224,
+        "1991": 244,
+        "1992": 236,
+        "1993": 277,
+        "1994": 287,
+        "1995": 307,
+        "1996": 339,
+        "1997": 359,
+        "1998": 378,
+        "1999": 394,
+        "2000": 444,
+        "2001": 484,
+        "2002": 511,
+        "2003": 498,
+        "2004": 559,
+        "2005": 620,
+        "2006": 681,
+        "2007": 715,
+        "2008": 737,
+        "2009": 761
+    },
+    "year_range": [
+        1990,
+        2010
+    ]
+}
+
+--------------------------------------------------------------------------------------------------
+
+[sector diagram] How ’s rating of movies release in genre  ___（choose one）___ in between ___2005___ and ___2010____.
+
+API:
+http://localhost:3300/api/genres/Rating?genre=(genre)&from=(year)&to=(year)
+
+Example:
+How many movies in genre  __Adventure__ between___2000___ and ___2010____.
+http://localhost:3300/api/genres/Rating?genre=Adventure&from=2000&to=2010
+
+Result:
+{
+    "genre": "Rating",
+    "movies": {
+        "0-2": 3,
+        "2-4": 61,
+        "4-6": 319,
+        "6-8": 419,
+        "8-10": 18
+    },
+    "year_range": [
+        2000,
+        2010
+    ]
+}
+
+If didn't provide query grene, you will get ratings of all genre of movies
+
+Example:
+http://localhost:3300/api/genres/Rating?&from=2000&to=2010
+
+
