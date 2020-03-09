@@ -1,7 +1,0 @@
-How many movies in tag  ______have rating  range _____ in year  ______.
-
-[histogram]Plot the rating between _____2005 and 2010.________.
-
-[sector plot] rating range __(4-5)__ in all movies ___(2010)____. 
-
-[histogram] 选择6个genre， 画出数据库中它们的数量。
