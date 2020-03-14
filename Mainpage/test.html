@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取input输入框中的值</title>
+</head>
+<body>
+	<form name="myForm">
+		<input type="text" name="inputBox">
+		<input type="button" value="点击获取input输入框中的值" onclick="getInputVal()">
+	</form>
+	<p class="content"></p>
+	<script>
+		function getInputVal(){
+			const content = document.querySelectorAll('.content')[0];
+			// 获取input输入框中的值
+			let inputVal = myForm.inputBox.value;
+			if(inputVal){
+				content.innerHTML = inputVal;
+			}else{
+				alert('请在input输入框中填点东西');
+			}
+		}
+	</script>
+</body>
+</html>
