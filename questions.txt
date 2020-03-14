@@ -2,7 +2,7 @@
 The distribution of all genres during different time, which can show the trend of movies.
 
 API:
-http://localhost:3300/api/genres/All?from=(year)&to=(year)
+http://99.79.10.143:3300/api/genres/All?from=(year)&to=(year)
 
 Result:
 {
@@ -45,7 +45,7 @@ http://localhost:3300/api/genres/(genre)?from=(year)&to=(year)
 
 Example:
 How many movies in genre  __Drama__ between___1999___ and ___2010____.
-http://localhost:3300/api/genres/Drama?from=1990&to=2010
+http://99.79.10.143:3300/api/genres/Drama?from=1990&to=2010
 
 Result:
 {
@@ -87,7 +87,7 @@ http://localhost:3300/api/genres/Rating?genre=(genre)&from=(year)&to=(year)
 
 Example:
 How many movies in genre  __Adventure__ between___2000___ and ___2010____.
-http://localhost:3300/api/genres/Rating?genre=Adventure&from=2000&to=2010
+http://99.79.10.143:3300/api/genres/Rating?genre=Adventure&from=2000&to=2010
 
 Result:
 {
