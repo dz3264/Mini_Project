@@ -13,7 +13,7 @@ body{
 }
 .sub_menue
 {
-    display:none;              /*先将子菜单设置为隐藏*/
+    display:none;
 }
 ul.menue{
     font-size: 150%;
@@ -21,7 +21,7 @@ ul.menue{
 }
 li:hover .sub_menue
 {
-    display:block;             /*设置鼠标滑过动作，以块级元素的形式显示出子菜单*/
+    display:block;             /*set mouse hover action*/
 }
 h1{
     font-size: 250%;
