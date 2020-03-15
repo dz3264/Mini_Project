@@ -113,7 +113,7 @@ let barChart = document.getElementById('barChart').getContext('2d');
         fi
         ],
       backgroundColor:
-        '#2ecc71',
+        '#fbfcd0',
       borderWidth:1,
       borderColor:'#777',
       hoverBorderWidth:3,
@@ -143,7 +143,14 @@ let barChart = document.getElementById('barChart').getContext('2d');
     },
     tooltips:{
       enabled:true
-    }
+    },
+  scales: {
+      xAxes: [{
+          ticks: {
+              autoSkip: false
+          }
+      }]
+  }
   }
 });
 });
@@ -174,11 +181,11 @@ data: {
     labels: ["0-2", "2-4", "4-6", "6-8", "8-10"],
     datasets: [{
     backgroundColor: [
-        "#2ecc71",
-        "#3498db",
-        "#B7950B",
-        "#117A65",
-        "#2E4053"
+        "#ccec9e",
+        "#94d492",
+        "#79c389",
+        "#78b4af",
+        "#8aa6c5"
     ],
     data: [quantity_0_2,quantity_2_4, quantity_4_6, quantity_6_8, quantity_8_10]
     }]
