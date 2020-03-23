@@ -6,12 +6,13 @@ var mylinechart=null;
 Chart.defaults.global.defaultFontFamily = 'pixel';
 Chart.defaults.global.defaultFontSize = 18;
 Chart.defaults.global.defaultFontColor = '#777';
+dns = '52.60.58.196:3300';
 function geturl1(){//get url for q1 time selection
   var e1 = document.getElementById('q1_select1');
   var inputVal1 = e1.value;
   var e2 = document.getElementById('q1_select2');
   var inputVal2 = e2.value;
-  var url = "https://cors-anywhere.herokuapp.com/99.79.10.143:3300/api/genres/All?format=json&from=" + inputVal1 +"&to=" + inputVal2;
+  var url = "https://cors-anywhere.herokuapp.com/"+dns+"/api/genres/All?format=json&from=" + inputVal1 +"&to=" + inputVal2;
   return url;
 }
 function geturl2(){//get url for q2
@@ -21,7 +22,7 @@ var e2 = document.getElementById('q2_select2');
 var year1 = e2.value;
 var e3 = document.getElementById('q2_select3');
 var year2 = e3.value;
-var url = "https://cors-anywhere.herokuapp.com/99.79.10.143:3300/api/genres/Rating?genre=" + gen + "&format=json&from=" + year1 + "&to=" + year2;
+var url = "https://cors-anywhere.herokuapp.com/"+dns+"/api/genres/Rating?genre=" + gen + "&format=json&from=" + year1 + "&to=" + year2;
 return url;
 }
 function geturl3(){//get url for q3
@@ -31,7 +32,7 @@ var e2 = document.getElementById('q3_select2');
 var year1 = e2.value;
 var e3 = document.getElementById('q3_select3');//http://99.79.10.143:3300/api/genres/Drama?format=json&from=1990&to=1991
 var year2 = e3.value;//http://99.79.10.143:3300/api/genres/Drama?format=json&from=1990&to=2010
-var url = "https://cors-anywhere.herokuapp.com/99.79.10.143:3300/api/genres/" + gen + "?format=json&from=" + year1 + "&to=" + year2;
+var url = "https://cors-anywhere.herokuapp.com/"+dns+"/api/genres/" + gen + "?format=json&from=" + year1 + "&to=" + year2;
 return url;
 }
 function DrawBarChart(){
